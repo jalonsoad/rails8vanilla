@@ -1,32 +1,60 @@
 
- <!-- Horizontal Scrollable Cards -->
- <div class="overflow-x-auto no-scrollbar -mx-6 px-6">
-  <div class="flex space-x-3">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <div class="overflow-x-auto no-scrollbar -mx-6 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-sm rounded-lg p-4">
+        <h3 class="text-base font-medium">Coventry House</h3>
+        <p class="text-sm text-gray-600">25 SALT MARSH ROAD</p>
+        <p class="text-sm text-freehold-light mt-2">£2,232,835.72</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-sm rounded-lg p-4">
+        <h3 class="text-base font-medium">Roof repair</h3>
+        <p class="text-sm text-gray-600">30/12/2024</p>
+        <p class="text-sm text-freehold-pink font-medium mt-2">2 Days</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-sm rounded-lg p-4">
+        <h3 class="text-base font-medium">Bank Statement</h3>
+        <p class="text-sm text-gray-600">19/12/2024</p>
+        <p class="text-sm text-freehold-blue mt-2">By Julio Alonso</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="overflow-x-auto no-scrollbar -mx-6 px-6 mb-6  flex items-center">
+  <div class="flex space-x-3 w-full">
     <!-- Card 1 -->
-    <div class="w-80 bg-white shadow-sm rounded-lg p-4">
+    <div class="w-full md:w-1/3 lg:w-1/4 bg-white shadow-sm rounded-lg p-4">
       <h3 class="text-base font-medium">Coventry House</h3>
       <p class="text-sm text-gray-600">25 SALT MARSH ROAD</p>
       <p class="text-sm text-freehold-light mt-2">£2,232,835.72</p>
     </div>
     <!-- Card 2 -->
-    <div class="w-80 bg-white shadow-sm rounded-lg p-4">
+    <div class="w-full md:w-1/3 lg:w-1/4 bg-white shadow-sm rounded-lg p-4">
       <h3 class="text-base font-medium">Roof repair</h3>
       <p class="text-sm text-gray-600">30/12/2024</p>
-      <p class="text-sm text-freehold-pink  font-medium mt-2">2 Days</p>
+      <p class="text-sm text-freehold-pink font-medium mt-2">2 Days</p>
     </div>
-   
-    <!-- Card 4 -->
-    <div class="w-80 bg-white shadow-sm rounded-lg p-4">
+    <!-- Card 3 -->
+    <div class="w-full md:w-1/3 lg:w-1/4 bg-white shadow-sm rounded-lg p-4">
       <h3 class="text-base font-medium">Bank Statement</h3>
       <p class="text-sm text-gray-600">19/12/2024</p>
-      <p class="text-sm text-freehold-blue  mt-2">By Julio Alonso</p>
+      <p class="text-sm text-freehold-blue mt-2">By Julio Alonso</p>
     </div>
   </div>
 </div>
 
 
 <!-- Promotional Card  with image-->
-<div class="mt-6 bg-green-100 rounded-lg p-4 shadow flex items-center">
+
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+<div class="bg-green-100 rounded-lg p-4 shadow flex items-center">
   <!-- Text Content -->
   <div class="flex-1">
     <h3 class="text-lg font-semibold text-green-900">Go paper-free</h3>
@@ -41,7 +69,7 @@
     <img src="<%= asset_path('building-illustration-1.png') %>" alt="Go paper-free" class="w-24 h-24 rounded-lg">
   </div>
 </div>
-
+</div>
 
 <div class="my-6">
   <h2 class="text-lg font-bold mb-4">Quick Actions</h2>

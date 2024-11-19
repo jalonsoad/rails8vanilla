@@ -1,21 +1,33 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <% content_for :title, "Posts" %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Posts</h1>
-    <%= link_to "New post", new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <!-- New Post Button -->
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-xl font-bold">Posts</h1>
+    <%= link_to 'New Post', new_post_path, class: "bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg" %>
   </div>
 
-  <div id="posts" class="min-w-full">
+  <!-- Posts Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <% @posts.each do |post| %>
-      <%= render post %>
-      <p>
-        <%= link_to "Show this post", post, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
+      <!-- Post Card -->
+      <div class="bg-white shadow-md rounded-lg">
+        <!-- Post Image -->
+        <% if post.body.embeds.any? && post.body.embeds.first.image? %>
+          <%= image_tag url_for(post.body.embeds.first.variant(resize_to_fill: [400, 200])), alt: post.title, class: "rounded-t-lg w-full h-48 object-cover" %>
+        <% else %>
+          <%= image_tag 'default-placeholder.png', alt: 'Default image', class: "rounded-t-lg w-full h-48 object-cover" %>
+        <% end %>
+
+        <!-- Post Content -->
+        <div class="p-4">
+          <h2 class="text-lg font-semibold mb-2"><%= post.title %></h2>
+          <p class="text-gray-600 text-sm mb-4"><%= truncate(strip_tags(post.body.to_s), length: 70) %></p>
+          <div class="flex justify-between items-center">
+            <%= link_to 'Show', post_path(post), class: "text-blue-600 hover:underline text-sm" %>
+            <%= link_to 'Edit', edit_post_path(post), class: "text-yellow-600 hover:underline text-sm" %>
+            <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-red-600 hover:underline text-sm" %>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
