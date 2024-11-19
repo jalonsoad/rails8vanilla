@@ -836,8 +836,8 @@
                 <li
                   class="block border-b dark:border-gray-700 lg:inline lg:border-b-0">
                   <a
-                    href="#"
-                    class="block py-3 px-4 text-gray-500 dark:text-gray-400 hover:text-primary-600 border-b-2 dark:border-gray-900 border-white dark:hover:text-primary-500 dark:hover:border-primary-500 hover:border-primary-600">Overview</a>
+                    href="<%= root_path%>"
+                    class="block py-3 px-4 text-gray-500 dark:text-gray-400 hover:text-primary-600 border-b-2 dark:border-gray-900 border-white dark:hover:text-primary-500 dark:hover:border-primary-500 hover:border-primary-600">Home</a>
                 </li>
                 <li
                   class="block border-b dark:border-gray-700 lg:inline lg:border-b-0">
@@ -873,8 +873,8 @@
                 <li
                   class="block border-b dark:border-gray-700 lg:inline lg:border-b-0">
                   <a
-                    href="#"
-                    class="block py-3 px-4 text-gray-500 dark:text-gray-400 hover:text-primary-600 border-b-2 border-white dark:border-gray-900 dark:hover:text-primary-500 dark:hover:border-primary-500 hover:border-primary-600">Settings</a>
+                    href="<%=faqs_path%>"
+                    class="block py-3 px-4 text-gray-500 dark:text-gray-400 hover:text-primary-600 border-b-2 border-white dark:border-gray-900 dark:hover:text-primary-500 dark:hover:border-primary-500 hover:border-primary-600">Faqs</a>
                 </li>
               </ul>
             </div>
@@ -882,16 +882,7 @@
         </nav>
       </header>
       <main class="dark:bg-gray-900 flex-1 p-4 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
-        <div class="border-2 border-dashed border-gray-300 rounded-xl dark:border-gray-600 h-96"></div>
+      
         <%= yield %>
       </main>
 
