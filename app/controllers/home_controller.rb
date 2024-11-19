@@ -4,4 +4,3 @@ class HomeController < ApplicationController
   def faqs
   end
 end
-
