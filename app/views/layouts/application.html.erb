@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>My test App</title>
+    <title><%= content_for(:title) || "Test responsive app" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-  
+
+    <%= yield :head %>
    
       <%# Includes all stylesheet files in app/assets/stylesheets %>
       <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
