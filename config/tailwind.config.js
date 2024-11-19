@@ -9,6 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'freehold-green':'#E7F1EE',
+        'freehold-dark':'#15803d',
+        'freehold-light':'#69ddbf',
+        'freehold-pink':'#d74daf',
+        'freehold-blue':'#223a66'
+    },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
