@@ -17,7 +17,6 @@
   </head>
   <body class="bg-gray-50 dark:bg-gray-800">
 
-  
 
   <!-- Top Header -->
   <header>
@@ -469,7 +468,6 @@
           </svg>
         </button>
       </div>
-       
       <% end %>
       <% if alert %>
 
@@ -491,12 +489,11 @@
       <% end %>
     </div>
   
-      <!-- Main Content -->
-      <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24">
+       <!-- Main Content-->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24">
+          <%= turbo_frame_tag "modal" %>
+
         <%= yield %>
-        
-
-
 
         <dialog id="turbo-confirm" class="p-0 rounded-lg">
           <form method="dialog" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -517,17 +514,12 @@
           </form>
         </dialog>
 
-
-
-
-
-
       </main>
 
   <!-- Bottom Menu -->
    <!-- Bottom Navigation -->
 
-  <nav class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+  <nav class="fixed bottom-0 left-0 z-50 w-full h-16 bg-gray-100 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
             <%= link_to root_path, class: "inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" do %>
               <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-freehold-light dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"  width="24" height="24" fill="currentColor" viewBox="0 0 24 24"">

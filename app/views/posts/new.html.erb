@@ -1,12 +1,21 @@
-<%= turbo_frame_tag "post_modal" do %>
-  <div aria-labelledby="modal-title"
-    aria-modal="true" class="fixed inset-0 z-50 overflow-y-auto bg-black/80" role="dialog">
-    <div class="h-screen w-full relative flex items-center justify-center">
-      <div class="shadow-xl max-w-2xl bg-white m-1 p-8 prose prose-indigo origin-bottom mx-auto dark:bg-slate-700 dark:text-slate-200 min-w-[600px] rounded-2xl">
+<%= turbo_frame_tag "modal" do %>
 
-        <h1 id="modal-title" class="dark:text-slate-100">New post</h1>
-        <%= render "form", post: @post %>
+<div aria-labelledby="modal-title"
+aria-modal="true" class="fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" role="dialog">
+<div class="h-screen w-full relative flex items-center justify-center">
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+
+              <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Create New Message
+                </h3>
+            </div>
+              <div class="p-4 md:p-5 space-y-4">
+                    <%= render "form", post: @post %>
+              </div>
+            
+          </div>
       </div>
-    </div>
-  </div>
+</div>
 <% end %>

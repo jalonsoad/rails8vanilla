@@ -1,0 +1,13 @@
+{
+  "name": "Test freehold",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "short_name": "freehold",
+  "id": "freehold",
+  "description": "this is freehold pwa",
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "window-controls-overlay"
+  ]
+}
