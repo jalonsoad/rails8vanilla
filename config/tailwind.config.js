@@ -17,7 +17,7 @@ module.exports = {
         'freehold-blue':'#223a66'
     },
       fontSize: {
-        base: '0.500rem', // Default font size (14px)
+        base: '0.800rem', // Default font size (14px)
         lg: '1rem',       // Large font size (16px)
       },
     },
