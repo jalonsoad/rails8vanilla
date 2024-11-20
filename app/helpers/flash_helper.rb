@@ -7,4 +7,4 @@ module FlashHelper
         "bg-blue-100 text-blue-700"
       end
     end
-  end
+end
